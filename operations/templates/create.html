@@ -1,0 +1,35 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<title>Title</title>
+</head>
+<body>
+    <div class="col-12 d-flex justify-content-center">
+    <div class="d-inline-flex col-6 card border-primary m-5 p-5">
+      <img class="card-img-top" src="holder.js/100px180/" alt="">
+      <div class="card-body">
+        <h4 class="card-title">Create</h4>
+         <form method="POST" >
+             {% csrf_token %}
+             {{form | crispy}}
+             <button type="submit" class="text-align btn btn-primary mt-3 ">Create</button>
+               
+        </form>
+      </div>
+    </div>
+    </div>
+   
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+</body>
+</html>
